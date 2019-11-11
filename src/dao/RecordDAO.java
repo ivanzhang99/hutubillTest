@@ -147,7 +147,7 @@ public class RecordDAO {
 
 	public List<Record> list(int cid) {
 		List<Record> records = new ArrayList<Record>();
-		String sql = "selete * from record where cid =?";
+		String sql = "select * from record where cid =?";
 		try (Connection c = DBUtil.getConnection(); PreparedStatement ps = c.prepareStatement(sql);) {
 			ps.setInt(1, cid);
 			ResultSet rs = ps.executeQuery();
